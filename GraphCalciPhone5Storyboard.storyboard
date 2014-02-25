@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="d8e-1i-uFn">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Graph Calc View Controller-->
+        <scene sceneID="pax-Fw-Ypb">
+            <objects>
+                <viewController storyboardIdentifier="GCiPhone5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="d8e-1i-uFn" customClass="GraphCalcViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qaw-4n-a5q"/>
+                        <viewControllerLayoutGuide type="bottom" id="y6u-V1-xVz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2E2-S7-v7r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHN-Jd-YX1">
+                                <rect key="frame" x="272" y="528" width="37" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterButton:" destination="d8e-1i-uFn" eventType="touchUpInside" id="3zr-JW-cvI"/>
+                                </connections>
+                            </button>
+                            <containerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkR-0o-cw0" customClass="UITableView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="203"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Dxf-A0-9Nk" kind="embed" id="GOh-8Z-6Q2"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jy-hy-erV">
+                                <rect key="frame" x="109" y="528" width="103" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Show NumPad">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNumPad:" destination="d8e-1i-uFn" eventType="touchUpInside" id="eRm-5B-b7L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4H-HW-AnB">
+                                <rect key="frame" x="0.0" y="229" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="dME-XF-jsq"/>
+                                </constraints>
+                                <state key="normal" title="Y=">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="y_equals:" destination="d8e-1i-uFn" eventType="touchUpInside" id="GJo-96-2SV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwf-cO-KyQ">
+                                <rect key="frame" x="62" y="229" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Xju-q9-QGm"/>
+                                </constraints>
+                                <state key="normal" title="Window">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="windowButton:" destination="d8e-1i-uFn" eventType="touchUpInside" id="xr9-X1-K0A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QW-k9-OzX">
+                                <rect key="frame" x="130" y="229" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KDT-qP-GzJ"/>
+                                </constraints>
+                                <state key="normal" title="Zoom">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomButton:" destination="d8e-1i-uFn" eventType="touchUpInside" id="zpy-fo-oOz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phn-l6-aIv">
+                                <rect key="frame" x="260" y="229" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="r6h-BC-aSe"/>
+                                </constraints>
+                                <state key="normal" title="Graph">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="graphButton:" destination="d8e-1i-uFn" eventType="touchUpInside" id="8aO-Hk-8Z3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kq1-iA-kCl">
+                                <rect key="frame" x="198" y="229" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="zzh-f9-dWi"/>
+                                </constraints>
+                                <state key="normal" title="Trace">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="traceButton:" destination="d8e-1i-uFn" eventType="touchUpInside" id="U3n-9G-Hea"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8jy-hy-erV" firstAttribute="bottom" secondItem="2E2-S7-v7r" secondAttribute="bottom" id="1VO-48-8oo"/>
+                            <constraint firstItem="kq1-iA-kCl" firstAttribute="leading" secondItem="3QW-k9-OzX" secondAttribute="trailing" constant="8" symbolic="YES" id="5OG-T6-exZ"/>
+                            <constraint firstItem="kq1-iA-kCl" firstAttribute="baseline" secondItem="Phn-l6-aIv" secondAttribute="baseline" id="8CC-tu-Y3q"/>
+                            <constraint firstItem="C4H-HW-AnB" firstAttribute="top" secondItem="qkR-0o-cw0" secondAttribute="bottom" constant="8" symbolic="YES" id="8Yg-vl-1Id"/>
+                            <constraint firstItem="3QW-k9-OzX" firstAttribute="centerX" secondItem="8jy-hy-erV" secondAttribute="centerX" id="CaA-Yr-ywm"/>
+                            <constraint firstItem="C4H-HW-AnB" firstAttribute="top" secondItem="2E2-S7-v7r" secondAttribute="top" constant="211" id="M9n-Ah-A6H"/>
+                            <constraint firstItem="nHN-Jd-YX1" firstAttribute="trailing" secondItem="2E2-S7-v7r" secondAttribute="trailing" id="NCg-gO-TSf"/>
+                            <constraint firstItem="qkR-0o-cw0" firstAttribute="trailing" secondItem="2E2-S7-v7r" secondAttribute="trailing" id="SRi-6j-JiW"/>
+                            <constraint firstItem="nHN-Jd-YX1" firstAttribute="bottom" secondItem="2E2-S7-v7r" secondAttribute="bottom" id="VoV-bl-Zna"/>
+                            <constraint firstItem="C4H-HW-AnB" firstAttribute="leading" secondItem="2E2-S7-v7r" secondAttribute="leading" id="XYA-jF-h9w"/>
+                            <constraint firstItem="Phn-l6-aIv" firstAttribute="trailing" secondItem="2E2-S7-v7r" secondAttribute="trailing" id="Z7U-z9-ssF"/>
+                            <constraint firstItem="qkR-0o-cw0" firstAttribute="top" secondItem="2E2-S7-v7r" secondAttribute="top" id="anu-vT-iyu"/>
+                            <constraint firstItem="mwf-cO-KyQ" firstAttribute="baseline" secondItem="C4H-HW-AnB" secondAttribute="baseline" id="beJ-BH-i0r"/>
+                            <constraint firstItem="3QW-k9-OzX" firstAttribute="leading" secondItem="mwf-cO-KyQ" secondAttribute="trailing" constant="8" symbolic="YES" id="hbK-39-MQS"/>
+                            <constraint firstItem="qkR-0o-cw0" firstAttribute="leading" secondItem="2E2-S7-v7r" secondAttribute="leading" id="kBN-d0-k9F"/>
+                            <constraint firstItem="3QW-k9-OzX" firstAttribute="baseline" secondItem="mwf-cO-KyQ" secondAttribute="baseline" id="lqV-Ci-cuR"/>
+                            <constraint firstItem="3QW-k9-OzX" firstAttribute="centerX" secondItem="qkR-0o-cw0" secondAttribute="centerX" id="xgu-Oh-wzw"/>
+                            <constraint firstItem="kq1-iA-kCl" firstAttribute="baseline" secondItem="3QW-k9-OzX" secondAttribute="baseline" id="yKJ-MV-nXw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVV-S7-rJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138" y="-153"/>
+        </scene>
+        <!--Graph Calc Table View Controller-->
+        <scene sceneID="dZ9-xL-Fxe">
+            <objects>
+                <tableViewController id="Dxf-A0-9Nk" customClass="GraphCalcTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="b1S-Ex-UsW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="kyg-iy-c2A">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="XzS-1l-Iib">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XzS-1l-Iib" id="lHL-08-4CZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" id="jCm-0N-GVx">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jCm-0N-GVx" id="EAe-oQ-1K9">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell4" id="vhC-jT-a72">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vhC-jT-a72" id="f1l-14-OB9">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell3" id="dwN-0V-mUq">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dwN-0V-mUq" id="PVW-Vp-ZpM">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="BhZ-Yn-FYe">
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BhZ-Yn-FYe" id="kOa-QX-8be">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="3PC-B6-JZ2">
+                                        <rect key="frame" x="0.0" y="220" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3PC-B6-JZ2" id="l3e-vg-mGC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="BhZ-16-3yJ">
+                                        <rect key="frame" x="0.0" y="264" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BhZ-16-3yJ" id="zhM-hs-hdu">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="dFI-jx-A4x">
+                                        <rect key="frame" x="0.0" y="308" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dFI-jx-A4x" id="WSz-CL-KvL">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell5" id="jkI-sp-MRV">
+                                        <rect key="frame" x="0.0" y="352" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jkI-sp-MRV" id="lBn-14-Ebe">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Dxf-A0-9Nk" id="p19-Xm-XPI"/>
+                            <outlet property="delegate" destination="Dxf-A0-9Nk" id="jTY-JC-NKs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BrT-HK-yR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="-153"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
